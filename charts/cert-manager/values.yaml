@@ -1,0 +1,8 @@
+operator:
+  namespace: cert-manager-operator
+  subscriptionName: openshift-cert-manager-operator
+  packageName: openshift-cert-manager-operator
+  channel: stable-v1
+  source: redhat-operators
+  sourceNamespace: openshift-marketplace
+  installPlanApproval: Automatic
