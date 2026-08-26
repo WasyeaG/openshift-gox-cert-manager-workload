@@ -1,0 +1,21 @@
+name: Cert Manager GitOps
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: Apply the rendered ApplicationSet
+        required: false
+        type: boolean
+        default: false
+
+jobs:
+  applicationset:
+    uses: WasyeaG/openshift-gox-reusable-gitops-workflows/.github/workflows/gitops-applicationset-pipeline.yaml@main
+    with:
+      applicationset_chart_path: charts/applicationset-template
+      values_file: gitops/values-sbx.yaml
+      environment: sbx
+      cluster_selector_key: gox.li9.com/environment
+      apply: ${{ inputs.apply }}
+    secrets: inherit

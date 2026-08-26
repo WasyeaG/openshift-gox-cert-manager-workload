@@ -1,0 +1,24 @@
+application:
+  name: cert-manager
+
+applicationset:
+  name: gox-sbx-cert-manager
+  namespace: openshift-gitops
+
+source:
+  repoURL: https://github.com/WasyeaG/openshift-gox-cert-manager-workload.git
+  path: charts/cert-manager
+  targetRevision: main
+
+destination:
+  namespace: cert-manager-operator
+
+clusterSelector:
+  key: gox.li9.com/environment
+  value: sbx
+
+environment: sbx
+
+helm:
+  releaseName: cert-manager
+  valueFiles: []
