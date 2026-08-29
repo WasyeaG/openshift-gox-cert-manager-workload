@@ -1,0 +1,13 @@
+applicationset:
+  name: gox-prd-cert-manager
+
+source:
+  targetRevision: main
+
+clusterSelector:
+  value: prd
+
+environment: prd
+
+helm:
+  valueFiles: []

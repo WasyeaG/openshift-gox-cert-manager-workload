@@ -1,0 +1,13 @@
+applicationset:
+  name: gox-sbx-cert-manager
+
+source:
+  targetRevision: sbx
+
+clusterSelector:
+  value: sbx
+
+environment: sbx
+
+helm:
+  valueFiles: []

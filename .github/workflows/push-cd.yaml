@@ -1,0 +1,11 @@
+name: Push GitOps Pipeline
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  gitops:
+    uses: WasyeaG/openshift-gox-reusable-gitops-workflows/.github/workflows/push-gitops-workflow.yaml@main
+    secrets: inherit
