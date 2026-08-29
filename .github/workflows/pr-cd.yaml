@@ -1,0 +1,11 @@
+name: Pull Request GitOps Pipeline
+
+on:
+  pull_request:
+    branches:
+      - '**'
+
+jobs:
+  gitops:
+    uses: WasyeaG/openshift-gox-reusable-gitops-workflows/.github/workflows/pr-gitops-workflow.yaml@main
+    secrets: inherit

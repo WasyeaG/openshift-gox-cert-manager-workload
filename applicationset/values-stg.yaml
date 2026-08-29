@@ -1,0 +1,13 @@
+applicationset:
+  name: gox-stg-cert-manager
+
+source:
+  targetRevision: stg
+
+clusterSelector:
+  value: stg
+
+environment: stg
+
+helm:
+  valueFiles: []
